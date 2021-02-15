@@ -6,4 +6,8 @@ UI: Swagger<br/>
 Mediaor: Mediatr<br/>
 Pattern : CQRS<br/>
 
-![alt text](https://github.com/ertemizmustafa/OderApi/swagger.png?raw=true)
+Swagger<br/>
+![alt text](https://github.com/ertemizmustafa/OrderApi/blob/master/swagger.PNG?raw=true)
+
+Log Info<br/>
+![alt text](https://github.com/ertemizmustafa/OrderApi/blob/master/log.PNG?raw=true)
