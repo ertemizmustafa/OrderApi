@@ -1,9 +1,10 @@
 # OrderApi<br/>
 
 Database: Microsoft.Data.Sqlite<br/>
+ORM: Dapper<br/>
 Validation: Fluentvalidation<br/>
 UI: Swagger<br/>
-Mediaor: Mediatr<br/>
+Mediator: Mediatr<br/>
 Pattern : CQRS<br/>
 
 Swagger<br/>
