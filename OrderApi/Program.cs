@@ -1,11 +1,8 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace OrderApi
 {
@@ -20,7 +17,17 @@ namespace OrderApi
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    webBuilder.ConfigureAppConfiguration(x => x.AddConfiguration(GetConfiguration()));
                     webBuilder.UseStartup<Startup>();
                 });
+
+        private static IConfiguration GetConfiguration()
+        {
+            var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIROMENT");
+            return new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile(!string.IsNullOrEmpty(env) ? $"appsetting.{env}.json" : "appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+        }
     }
 }
