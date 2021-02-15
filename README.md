@@ -1,7 +1,7 @@
-# OrderApi
+# OrderApi<br/>
 
-Database: Microsoft.Sqllite
-Validation: Fluentvalidation
-UI: Swagger
-Mediaor: Mediatr
-Pattern : CQRS
+Database: Microsoft.Sqllite<br/>
+Validation: Fluentvalidation<br/>
+UI: Swagger<br/>
+Mediaor: Mediatr<br/>
+Pattern : CQRS<br/>
